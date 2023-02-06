@@ -76,8 +76,7 @@ searchHistoryList.on("click","li.city-btn", function(event) {
 // Request Open Weather API based on user input
 function currentConditionsRequest(searchValue) {
     
-    // Formulate URL for AJAX api call
-    //var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&units=imperial&appid=" + APIkey;
+//Concatenate the URL , Searchvalue and APIkey
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&units=metric&appid=" + APIkey;
     
@@ -101,16 +100,7 @@ function currentConditionsRequest(searchValue) {
         var lon = response.coord.lon;
         
 
-       /* var UVurl = "https://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&appid=" + APIkey;
-        // AJAX Call for UV index
-        $.ajax({
-            url: UVurl,
-            method: "GET"
-        }).then(function(response){
-            // console.log("UV call: ")
-            // console.log(response);
-            UVindex.text(response.value);
-        });*/
+
 
         //var countryCode = response.sys.country;
         var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?&units=metric&appid=" + APIkey + "&lat=" + lat +  "&lon=" + lon;
@@ -163,9 +153,7 @@ function currentConditionsRequest(searchValue) {
                 forecastHumidity.prepend("Humidity: ");
                 forecastHumidity.append("%");
                 
-                // console.log(response.list[i].dt_txt);
-                // console.log(response.list[i].main.temp);
-                // console.log(response.list[i].main.humidity);
+
 
             }
         });
@@ -178,9 +166,7 @@ function currentConditionsRequest(searchValue) {
 
 // Display and save the search history of cities
 function searchHistory(searchValue) {
-    // Grab value entered into search bar 
-    // var searchValue = searchCityInput.val().trim();
-    
+
     // If there are characters entered into the search bar
     if (searchValue) {
         // Place value in the array of cities
