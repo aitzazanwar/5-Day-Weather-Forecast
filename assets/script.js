@@ -95,6 +95,8 @@ function currentConditionsRequest(searchValue) {
         currentTemp.append("&deg;C");
         currentHumidity.text(response.main.humidity + "%");
         currentWindSpeed.text(response.wind.speed + " m/sec");
+        
+        //----------------
 
         var lat = response.coord.lat;
         var lon = response.coord.lon;
@@ -147,10 +149,14 @@ function currentConditionsRequest(searchValue) {
                 forecastTemp.append("&deg;C");
                 //------------------
                 forecastWind.text(response.list[i].wind.speed);
+                //---was "Wind"
                 forecastWind.prepend("Wind: ");
-                forecastWind.append(" m/sec");
+                //-----was "m/sec"
+                forecastWind.append(" m/sec ");
                forecastHumidity.text(response.list[i].main.humidity);
+               //------was "Humidity" 
                 forecastHumidity.prepend("Humidity: ");
+                //--------"%"
                 forecastHumidity.append("%");
                 
 
