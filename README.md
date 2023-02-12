@@ -17,3 +17,6 @@ User enters the name of the city and clicks on search button or hits enter. This
 ## Requirements
 to display the structure and function of weather app it requires an active internet connection and browser to display the page within.
 
+## Screenshot
+
+![img5-Day-Weather-Forecast](https://user-images.githubusercontent.com/25909368/218314992-76f8e037-6919-409b-8bd0-43a9a32a0146.png)
